@@ -12,7 +12,7 @@ namespace AiLaTrieuPhu
 {
     public partial class FinalScoreWindows : Form
     {
-        private MainMenu mainMenuForm = null;
+        private Form1 mainMenuForm = null;
         public FinalScoreWindows(string score)
         {
             InitializeComponent();
@@ -35,13 +35,13 @@ namespace AiLaTrieuPhu
             pen.Dispose();
         }
 
-        private void btnReturnToMainMenu_Click(object sender, EventArgs e)
+        private void btnReturnToForm1_Click(object sender, EventArgs e)
         {
             mainMenuForm.Show();
             this.Dispose();
         }
 
-        public void setMainMenuForm(MainMenu form)
+        public void setMainMenuForm(Form1 form)
         {
             this.mainMenuForm = form;
         }

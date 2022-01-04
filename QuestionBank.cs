@@ -12,21 +12,20 @@ namespace AiLaTrieuPhu
 {
     public class QuestionBank
     {
-        // Attributes
+        // Thuộc tính
         private List<Question> questions = new List<Question>();
         private Question lifeLineSwapQuestion = null;
         private databaseHelper databaseHelper = null;
 
-        // Constructor to retrieve and accordingly set questions
+        // Cấu trúc thay câu hỏi và phù hợp với bộ câu hỏi
         public QuestionBank()
         {
             databaseHelper = new databaseHelper();
             setQuestions();
-            setLifeLineSwapQuestion();
 
         }
 
-        // Set the main 15 questions
+        // Đặt 15 câu hỏi chính
         public void setQuestions()
         {
             SQLiteDataReader dataset = databaseHelper.importNQuestions(15);
@@ -38,15 +37,7 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Set question for the swap lifeline
-        public void setLifeLineSwapQuestion()
-        {
-            SQLiteDataReader dataset = databaseHelper.importNQuestions(1);
-            dataset.Read();
-            this.lifeLineSwapQuestion = new Question(dataset.GetString(1), dataset.GetString(2), dataset.GetString(3), dataset.GetString(4), dataset.GetString(5), dataset.GetString(6));
-        }
-
-        // Retrieve a question
+        // Thay câu hỏi
         public Question getQuestion(int questionNumber)
         {
             return questions[questionNumber];

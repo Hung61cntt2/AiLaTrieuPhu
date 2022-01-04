@@ -8,12 +8,12 @@ namespace AiLaTrieuPhu
 {
     public class Question
     {
-        // Attributes
+        // Thuộc tính
         public string questionText;
         public string[] options;
         public string answer;
 
-        // Constructor to set question, add options to array and set answer
+        // Cấu trúc câu hỏi, thêm các đáp án vào mảng và câu trả lời
         public Question(string questionText, string optionA, string optionB, string optionC, string optionD, string answer)
         {
             this.options = new string[4];
@@ -25,7 +25,7 @@ namespace AiLaTrieuPhu
             this.answer = answer;
         }
 
-        // Check if selected option is correct
+        // Kiểm tra nếu đáp án được lựa chọn là đúng
         public bool checkAnswer(string selectedOption)
         {
             string answer = selectedOption.Substring(3, selectedOption.Length - 3);
@@ -39,13 +39,13 @@ namespace AiLaTrieuPhu
             }
         }
 
-        //Retrieve question text
+        //Thay câu hỏi
         public string getQuestionText()
         {
             return questionText;
         }
 
-        //Retrieve options
+        //Thay 4 đáp án
         public string[] getOptions()
         {
             return options;

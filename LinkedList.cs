@@ -8,17 +8,17 @@ namespace AiLaTrieuPhu
 {
     public class LinkedList
     {
-        // Head of the list
+        // Đầu danh sách
         private LinkedListNode head;
 
-        // Constructor
+        // Thiết lập đầu danh sách
         public LinkedList()
         {
             this.head = null;
 
         }
 
-        // Add Node To End of List
+        // Thêm 1 Node đến cuối cùng danh sách
         public void addToList(LinkedListNode next)
         {
             if (head == null)
@@ -38,7 +38,7 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Return Head of List
+        // Quay lại đầu danh sách
         public LinkedListNode getHead()
         {
             return head;

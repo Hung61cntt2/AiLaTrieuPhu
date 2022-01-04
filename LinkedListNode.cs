@@ -9,14 +9,14 @@ namespace AiLaTrieuPhu
 {
     public class LinkedListNode
     {
-        // Attributes for current prize and whether is a checkpoint
+        // Thuộc tính giải thưởng và checkpoint
         private Button prize;
         private Boolean checkpoint;
 
-        // Next node in the linked list
+        // Node tiếp theo trong danh sách liên kết
         private LinkedListNode next = null;
 
-        // Constructor without next node attribute
+        // Cấu trúc (không có Node tiếp theo)
         public LinkedListNode(Button prize, Boolean checkpoint)
         {
             this.prize = prize;
@@ -24,19 +24,19 @@ namespace AiLaTrieuPhu
 
         }
 
-        // Return prize
+        // Quay lại giải thưởng
         public Button getPrize()
         {
             return this.prize;
         }
 
-        // Return checkpoint
+        // Quay lại checkpoint
         public Boolean getCheckpoint()
         {
             return this.checkpoint;
         }
 
-        // Return next node
+        // Quay lại Node tiếp theo
         public LinkedListNode getNext()
         {
             return this.next;

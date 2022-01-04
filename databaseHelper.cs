@@ -10,12 +10,12 @@ namespace AiLaTrieuPhu
     {
         private OleDbConnection connection = null;
 
-        // Open Connection
+        // Kết nối
         private SQLiteConnection connect()
         {
-            // Create a new database connection:
+            // Tạo mới 1 csdl
             SQLiteConnection connection = new SQLiteConnection("Data Source=questionsDatabase.db; Version = 3; New = True; Compress = True; ");
-            // Open the connection:
+            // Kết nối
             try
             {
                 connection.Open();
@@ -27,24 +27,24 @@ namespace AiLaTrieuPhu
             return connection;
         }
 
-        // Import N number of question from database
+        // Nhập n câu hỏi từ csdl
         public SQLiteDataReader importNQuestions(int n)
         {
-            // Connect to database & create command
+            // Kết nối đến csdl và tạo mới lệnh
             SQLiteConnection connection = connect();
             SQLiteCommand command = connection.CreateCommand();
 
-            // Set Query and execute
+            // Tạo hàng chờ và xử lý
             command.CommandText = "SELECT * FROM Question WHERE ID IN (SELECT ID FROM Question ORDER BY RANDOM() LIMIT " + n + ")";
             SQLiteDataReader dataReader = command.ExecuteReader();
 
-            // Disconnect and return data from database
+            // Ngắt kết nối và trả dữ liệu về csdl
             disconnect();
             return dataReader;
 
         }
 
-        // If Connection Is Not Open
+        // Nếu kết nối không được mở
         private void disconnect()
         {
             if (connection != null && connection.State == ConnectionState.Open) connection.Close();

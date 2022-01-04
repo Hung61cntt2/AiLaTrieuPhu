@@ -8,24 +8,24 @@ namespace AiLaTrieuPhu
 {
     class PollResults
     {
-        // Attributes
+        // Thuộc tính
         private char optionKey;
         private int value;
 
-        // Constructor to set values of attributes
+        // Cấu trúc để cài đặt giá trị cho thuộc tính
         public PollResults(String optionKey, int value)
         {
             this.optionKey = Convert.ToChar(optionKey);
             this.value = value;
         }
 
-        // Get option value poll corresponds to
+        // Lấy giá trị tùy chọn thăm dò tương ứng
         public char getoptionKey()
         {
             return this.optionKey;
         }
 
-        // Get value for poll
+        // Lấy giá trị từ thăm dò
         public int getValue()
         {
             return this.value;

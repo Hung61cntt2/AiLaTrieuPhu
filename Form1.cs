@@ -14,7 +14,7 @@ namespace AiLaTrieuPhu
 {
     public partial class Form1 : Form
     {
-        private MainMenu mainMenuForm = null;
+        private Form1 mainMenuForm = null;
         // Thuộc tính câu hỏi
         private int questionNo = 0;
         private QuestionBank bank = null;
@@ -36,7 +36,7 @@ namespace AiLaTrieuPhu
             // Xuất câu hỏi từ CSDL
             bank = new QuestionBank();
 
-            //
+            // Thêm các đáp án
             buttons.Add(btnoptionA);
             buttons.Add(btnoptionB);
             buttons.Add(btnoptionC);
@@ -61,16 +61,16 @@ namespace AiLaTrieuPhu
             prizeList.addToList(new LinkedListNode(prize15, true));
         }
 
-        // Draw lines on question panel
+        // Kẻ đường cho bảng điều khiển câu hỏi
         private void Questionpanel_Paint(object sender, PaintEventArgs e)
         {
             Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
 
-            // Draw Line For Question
+            // Kẻ đường cho câu hỏi
             pen.Width = 3;
             e.Graphics.DrawLine(pen, 0, 64, Questionpanel.Width, 64);
 
-            // Draw Line For Options
+            // Kẻ đường cho các đáp án
             pen.Width = 2f;
             e.Graphics.DrawLine(pen, 0, 146, Questionpanel.Width, 146);
             e.Graphics.DrawLine(pen, 0, 202, Questionpanel.Width, 202);
@@ -79,12 +79,12 @@ namespace AiLaTrieuPhu
         }
 
 
-        // Draw lines on prize panel on right of screen
+        // Kẻ đường cho bảng điều khiển giải thưởng
         private void Prizepanel_Paint(object sender, PaintEventArgs e)
         {
             Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
 
-            // Draw lines for each prize
+            // Kẻ đường cho mỗi mốc giải thưởng
             pen.Width = 2f;
             int position = 40;
 
@@ -94,7 +94,7 @@ namespace AiLaTrieuPhu
                 position += 42;
             }
 
-            // Draw border around prize panel;
+            // Vẽ khung xung quanh bảng điều khiên giải thưởng
             pen = new Pen(Color.FromArgb(255, 212, 175, 55), 5);
 
             Rectangle rect = Prizepanel.ClientRectangle;
@@ -112,12 +112,12 @@ namespace AiLaTrieuPhu
         
         private void button1_Click(object sender, EventArgs e)
         {
-            // Show final score window form and close this form
+            // Hiển thị form final score window và đóng form1
             if (Play.Text == "Continue")
             {
                 FinalScoreWindows window;
 
-                // If checkpoint has been passed, that is the final score else final score is £0
+                // Nếu vượt qua được checkpoint, thì đó là giải thưởng cuối cùng, ngược lại giải thưởng cuối cùng là 0 VND
                 if (lastCheckpoint != null)
                 {
                     window = new FinalScoreWindows(lastCheckpoint.getPrize().Text);
@@ -127,7 +127,7 @@ namespace AiLaTrieuPhu
                     window = new FinalScoreWindows("0. 0 NVD");
                 }
 
-                // Pass main menu form to final score window, show final score window and dispose of current open window
+                // Chuyển tới form final score window và đóng form1
                 window.setMainMenuForm(this.mainMenuForm);
                 window.Show();
                 this.Dispose();
@@ -137,13 +137,13 @@ namespace AiLaTrieuPhu
            
                 if (questionNo < 15)
                 {
-                    // Reset buttons backgrounds and get next question
+                    // Đặt lại nền của nút và chuyển đến câu hỏi tiếp theo
                     resetButtonBackgrounds();
                     currentQuestion = bank.getQuestion(questionNo);
                     Console.WriteLine(currentQuestion.answer);
                     lblQuestion.Text = currentQuestion.getQuestionText();
 
-                    // Set option button texts
+                    // Đặt lại các nút đáp án
                     var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
 
                     foreach (var ob in optionsAndButtons)
@@ -152,77 +152,77 @@ namespace AiLaTrieuPhu
                     }
                 }
 
-                // Set text of countdown timer and start timer.
+                // Đặt lại bộ đếm và bắt đầu đếm
                 settimer1();
                 timer1.Start();
 
-                // Show question number in next question button
+                // Hiển thị số đếm câu hỏi
                 Play.Text = "Question " + (questionNo + 1);
             }
 
         }
 
-        // Check answer selected
+        // Kiếm tra đáp án được lựa chọn
         private void answerCheck(Button selectedOption)
         {
 
-            // Stop countdown
+            // Dừng bộ đếm
             timer1.Stop();
 
-            // If correct answer selected
+            // Nếu đáp án được chọn là đúng
             if (currentQuestion.checkAnswer(selectedOption.Text))
             {
-                // Set background image of option selected to correct
+                // Đặt cái ảnh nền của đáp án được lựa chọn là đúng
                 selectedOption.BackColor = Color.LimeGreen;
-                // If first question, current prize is head of prize linked list
+                // Nếu là câu hỏi đầu tiên, thì giải thưởng sẽ là ở đầu danh sách liên kết
                 if (questionNo == 0)
                 {
                     currentPrize = prizeList.getHead();
                 }
 
-                // Else reset background of current prize and current prize assigned to next node in list
+                // Ngược lại thì đặt lại nền của giải thưởng hiện tại và chuyển giải thưởng hiện tại đến Node tiếp theo trong danh sách
                 else
                 {
                     currentPrize.resetBackground();
                     currentPrize = currentPrize.getNext();
                 }
 
-                // Set prize background of current prize
+                // Đặt lại nền của giải thưởng hiện tại
                 currentPrize.setPrizeBackground();
 
-                // If current prize is checkpoint, set lastcheckpoint accordingly
+                // Nếu giải thưởng hiện tại là checkpoint, đặt lại checkpoint cuối cùng
                 if (currentPrize.getCheckpoint())
                 {
                     lastCheckpoint = currentPrize;
                 }
 
-                // Increment question number
+                // Tăng số đếm câu hỏi
                 questionNo += 1;
 
-                // Set next question button to exit if final question answered correctly
+                // Đặt nút "Câu hỏi tiếp theo" thành nút "Đi đến giải thưởng" nếu trả lời đúng câu hỏi cuối cùng (thứ 15)
                 if (questionNo == 15)
                 {
-                    Play.Text = "Continue";
+                    Play.Text = "Đi đến giải thưởng";
                 }
                 else
                 {
-                    Play.Text = "Next Question";
+                    Play.Text = "Câu hỏi tiếp theo";
                 }
             }
 
-            // If selected option incorrect
+            // Nếu đáp án được chọn là sai
             else
             {
-                // Set selected option background color to incorrect color
+                // Đặt màu nền của đáp án được chọn là sai
                 selectedOption.BackColor = Color.DarkOrange;
 
-                // If checkpoint has been passed set prize background of checkpoint
+                // Nếu vượt qua được checkpoint thì đặt nền của checkpoint là giải thưởng
                 if (lastCheckpoint != null)
                 {
                     lastCheckpoint.setPrizeBackground();
                 }
 
-                // Set wrong background to current prize and disable option buttons
+                // Đặt nền sai vào giải thưởng hiện tại và vô hiệu hóa các đáp án
                 if (currentPrize != null)
                 {
                     currentPrize.setWrongBackground();
@@ -232,7 +232,7 @@ namespace AiLaTrieuPhu
                     prizeList.getHead().setWrongBackground();
                 }
 
-                // Find correct answer to show player
+                // Hiển thị đáp án đúng cho người chơi
                 foreach (Button button in buttons)
                 {
                     if (button.Enabled == true)
@@ -251,7 +251,7 @@ namespace AiLaTrieuPhu
 
         }
 
-        // Reset button backgrounds
+        // Đặt lại nền
         private void resetButtonBackgrounds()
         {
             foreach (Button button in buttons)
@@ -260,7 +260,7 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Disable option buttons
+        // Vô hiệu hóa các đáp án
         private void disableOptionButtons()
         {
             foreach (Button button in buttons)
@@ -269,7 +269,7 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Enable option buttons
+        // Bỏ vô hiệu hóa các đáp án 
         private void enableOptionButtons()
         {
             foreach (Button button in buttons)
@@ -278,34 +278,34 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // 50/50 lifeline button
+        // Nút trợ giúp 50/50
         private void btn5050_Click(object sender, EventArgs e)
         {
-            // Generate number between 0 and 3 based on which option to remove
+            // Quay ngẫu nhiên số giữa 0 và 3 dựa trên đáp án để loại bỏ thứ nhất
             int firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
 
-            // If the number generated is for the correct answer, generate a new number
+            // Nếu số lấy ngẫu nhiên trùng với đáp án đúng, quay lại số ngẫu nhiên mới
             while (currentQuestion.checkAnswer(buttons[firstOptionToRemove].Text))
             {
                 firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
             }
 
-            // Disable removed option button
+            // Vô hiệu hóa đáp án bị loại bỏ thứ nhất
             buttons[firstOptionToRemove].Enabled = false;
 
-            // Generate number between 0 and 3 based on which option to remove
+            // Chọn ngẫu nhiên số giữa 0 và 3 dựa trên đáp án để loại bỏ thứ hai
             int secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
 
-            // If the number generated is for the correct answer, generate a new number
+            // Nếu số lấy ngẫu nhiên trùng với đáp án đúng hoặc trùng với đáp án loại bỏ thứ nhất, quay lại số ngẫu nhiên mới
             while (currentQuestion.checkAnswer(buttons[secondOptionToRemove].Text) || secondOptionToRemove == firstOptionToRemove)
             {
                 secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
             }
 
-            // Disable removed option button
+            // Vô hiệu hóa đáp án bị loại bỏ thứ hai
             buttons[secondOptionToRemove].Enabled = false;
 
-            // Set background of 50/50 lifeline buttons and disable
+            // Đặt lại nền của nút trợ giúp 50/50 và vô hiệu hóa
             btn5050.BackgroundImage = Properties.Resources._5050_used;
             btn5050.Enabled = false;
 
@@ -397,7 +397,7 @@ namespace AiLaTrieuPhu
             return font;
         }
 
-        public void setMainMenuForm(MainMenu form)
+        public void setMainMenuForm(Form1 form)
         {
             this.mainMenuForm = form;
         }
