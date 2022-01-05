@@ -14,7 +14,6 @@ namespace AiLaTrieuPhu
     {
         // Thuộc tính
         private List<Question> questions = new List<Question>();
-        private Question lifeLineSwapQuestion = null;
         private databaseHelper databaseHelper = null;
 
         // Cấu trúc thay câu hỏi và phù hợp với bộ câu hỏi

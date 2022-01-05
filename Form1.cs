@@ -132,7 +132,7 @@ namespace AiLaTrieuPhu
                 window.Show();
                 this.Dispose();
             }
-            else if (Play.Text == "Next Question" || Play.Text == "START")
+            else if (Play.Text == "Câu tiếp theo" || Play.Text == "Chơi!")
             {
            
                 if (questionNo < 15)
@@ -157,7 +157,7 @@ namespace AiLaTrieuPhu
                 timer1.Start();
 
                 // Hiển thị số đếm câu hỏi
-                Play.Text = "Question " + (questionNo + 1);
+                Play.Text = "Câu hỏi thứ " + (questionNo + 1);
             }
 
         }
@@ -244,7 +244,7 @@ namespace AiLaTrieuPhu
                     }
                 }
 
-                Play.Text = "Continue";
+                Play.Text = "Đi đến giải thưởng";
             }
 
             disableOptionButtons();
