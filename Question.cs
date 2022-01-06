@@ -28,7 +28,7 @@ namespace AiLaTrieuPhu
         // Kiểm tra nếu đáp án được lựa chọn là đúng
         public bool checkAnswer(string selectedOption)
         {
-            string answer = selectedOption.Substring(3, selectedOption.Length - 3);
+            string answer = selectedOption.Substring(2, selectedOption.Length - 2);
             if (this.answer == answer)
             {
                 return true;

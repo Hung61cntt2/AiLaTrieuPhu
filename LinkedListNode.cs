@@ -51,24 +51,24 @@ namespace AiLaTrieuPhu
         {
             if (this.checkpoint)
             {
-                //this.prize.BackColor = Col
+                this.prize.BackgroundImage = Properties.Resources.checkpoint;
             }
             else
             {
-                //this.prize.BackColor = ConsoleColor.DarkBlue;
+                this.prize.BackgroundImage = Properties.Resources.button;
             }
 
         }
 
         public void setPrizeBackground()
         {
-            //this.prize.BackColor = ConsoleColor.DarkYellow;
+            this.prize.BackgroundImage = Properties.Resources.prize;
 
         }
 
         public void setWrongBackground()
         {
-            //this.prize.BackColor = ConsoleColor.DarkGreen;
+            this.prize.BackgroundImage = Properties.Resources.wrong;
 
         }
     }

@@ -16,10 +16,10 @@ namespace AiLaTrieuPhu
         public FinalScoreWindows(string score)
         {
             InitializeComponent();
-            lblPrizeAmount.Text = score.Substring(3, score.Length - 3);
+            lblPrizeAmount.Text = score.Substring(2, score.Length - 2);
         }
 
-        private void FinalScoreWindow_Paint(object sender, PaintEventArgs e)
+        private void FinalScoreWindows_Paint(object sender, PaintEventArgs e)
         {
             Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
 
@@ -52,6 +52,11 @@ namespace AiLaTrieuPhu
         }
 
         private void FinalScoreWindows_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrizeAmount_Click(object sender, EventArgs e)
         {
 
         }

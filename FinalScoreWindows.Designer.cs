@@ -56,6 +56,7 @@ namespace AiLaTrieuPhu
             this.lblPrizeAmount.Size = new System.Drawing.Size(268, 87);
             this.lblPrizeAmount.TabIndex = 1;
             this.lblPrizeAmount.UseVisualStyleBackColor = false;
+            this.lblPrizeAmount.Click += new System.EventHandler(this.lblPrizeAmount_Click);
             // 
             // btnReturnToForm1
             // 

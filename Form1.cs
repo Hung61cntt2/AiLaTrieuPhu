@@ -40,7 +40,7 @@ namespace AiLaTrieuPhu
             buttons.Add(btnoptionA);
             buttons.Add(btnoptionB);
             buttons.Add(btnoptionC);
-            buttons.Add(btnoptionC);
+            buttons.Add(btnoptionD);
             disableOptionButtons();
 
             // Thêm giải thưởng vào danh sách liên kết
@@ -61,59 +61,18 @@ namespace AiLaTrieuPhu
             prizeList.addToList(new LinkedListNode(prize15, true));
         }
 
-        // Kẻ đường cho bảng điều khiển câu hỏi
-        private void Questionpanel_Paint(object sender, PaintEventArgs e)
-        {
-            Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
 
-            // Kẻ đường cho câu hỏi
-            pen.Width = 3;
-            e.Graphics.DrawLine(pen, 0, 64, Questionpanel.Width, 64);
-
-            // Kẻ đường cho các đáp án
-            pen.Width = 2f;
-            e.Graphics.DrawLine(pen, 0, 146, Questionpanel.Width, 146);
-            e.Graphics.DrawLine(pen, 0, 202, Questionpanel.Width, 202);
-
-            pen.Dispose();
-        }
-
-
-        // Kẻ đường cho bảng điều khiển giải thưởng
-        private void Prizepanel_Paint(object sender, PaintEventArgs e)
-        {
-            Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
-
-            // Kẻ đường cho mỗi mốc giải thưởng
-            pen.Width = 2f;
-            int position = 40;
-
-            for (int control = 0; control <= 15; control++)
-            {
-                e.Graphics.DrawLine(pen, 0, position, Prizepanel.Width, position);
-                position += 42;
-            }
-
-            // Vẽ khung xung quanh bảng điều khiên giải thưởng
-            pen = new Pen(Color.FromArgb(255, 212, 175, 55), 5);
-
-            Rectangle rect = Prizepanel.ClientRectangle;
-            rect.Width--;
-            rect.Height--;
-            e.Graphics.DrawRectangle(pen, rect);
-
-            pen.Dispose();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
         
+        // Xử lý sự kiện nút Chơi!
         private void button1_Click(object sender, EventArgs e)
         {
             // Hiển thị form final score window và đóng form1
-            if (Play.Text == "Continue")
+            if (Play.Text == "Đi đến giải thưởng")
             {
                 FinalScoreWindows window;
 
@@ -132,9 +91,12 @@ namespace AiLaTrieuPhu
                 window.Show();
                 this.Dispose();
             }
-            else if (Play.Text == "Câu tiếp theo" || Play.Text == "Chơi!")
+            else if (Play.Text == "Câu hỏi tiếp theo" || Play.Text == "Chơi!")
             {
-           
+                // Mở các nút đáp án
+                enableOptionButtons();
+                //chartPollResults.Visible = false;
+
                 if (questionNo < 15)
                 {
                     // Đặt lại nền của nút và chuyển đến câu hỏi tiếp theo
@@ -148,7 +110,7 @@ namespace AiLaTrieuPhu
 
                     foreach (var ob in optionsAndButtons)
                     {
-                        ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
+                        ob.Button.Text = ob.Button.Text.Remove(2, ob.Button.Text.Length - 2).Insert(2, ob.Option);
                     }
                 }
 
@@ -173,7 +135,7 @@ namespace AiLaTrieuPhu
             if (currentQuestion.checkAnswer(selectedOption.Text))
             {
                 // Đặt cái ảnh nền của đáp án được lựa chọn là đúng
-                selectedOption.BackColor = Color.LimeGreen;
+                selectedOption.BackgroundImage = Properties.Resources.correct;
                 // Nếu là câu hỏi đầu tiên, thì giải thưởng sẽ là ở đầu danh sách liên kết
                 if (questionNo == 0)
                 {
@@ -214,7 +176,7 @@ namespace AiLaTrieuPhu
             else
             {
                 // Đặt màu nền của đáp án được chọn là sai
-                selectedOption.BackColor = Color.DarkOrange;
+                selectedOption.BackgroundImage = Properties.Resources.wrong;
 
                 // Nếu vượt qua được checkpoint thì đặt nền của checkpoint là giải thưởng
                 if (lastCheckpoint != null)
@@ -239,7 +201,7 @@ namespace AiLaTrieuPhu
                     {
                         if (currentQuestion.checkAnswer(button.Text))
                         {
-                            button.BackColor = Color.LimeGreen;
+                            button.BackgroundImage = Properties.Resources.correct;
                         }
                     }
                 }
@@ -256,7 +218,7 @@ namespace AiLaTrieuPhu
         {
             foreach (Button button in buttons)
             {
-                button.BackColor = Color.Indigo;
+                button.BackgroundImage = Properties.Resources.button;
             }
         }
 
@@ -341,6 +303,8 @@ namespace AiLaTrieuPhu
             return randomNumbers;
 
         }
+
+        // Đặt bộ đếm thời gian
         int i;
         private void settimer1()
         {
@@ -354,11 +318,11 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Countdown timer
+        // Bộ đếm thời gian
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            // If visible timer is not 0, decrement value, else stop countdown
+            // Nếu giá trị trên bộ đếm khác 0, giảm dần, ngược lại thì ngừng bộ đếm
             if (i != 0)
             {
                 i--;
@@ -370,6 +334,7 @@ namespace AiLaTrieuPhu
             }
         }
 
+
         private void lblQuestion_TextChanged(object sender, EventArgs e)
         {
 
@@ -377,6 +342,7 @@ namespace AiLaTrieuPhu
             control.Font = sizeTextToControl(control, this.CreateGraphics(), control.Padding.Right);
 
         }
+
 
         private Font sizeTextToControl(Control control, Graphics graphic, int padding)
         {
@@ -397,12 +363,13 @@ namespace AiLaTrieuPhu
             return font;
         }
 
+
         public void setMainMenuForm(Form1 form)
         {
             this.mainMenuForm = form;
         }
 
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
@@ -414,17 +381,41 @@ namespace AiLaTrieuPhu
 
         private void btn5050_Click_1(object sender, EventArgs e)
         {
-            btn5050.BackgroundImage = Properties.Resources._5050;
+            btn5050.BackgroundImage = Properties.Resources._5050_used;
         }
 
         private void btnAudience_Click(object sender, EventArgs e)
         {
-            btnAudience.BackgroundImage = Properties.Resources.Audience;
+            btnAudience.BackgroundImage = Properties.Resources.Audience_used;
         }
 
         private void btnPhone_Click(object sender, EventArgs e)
         {
-            btnPhone.BackgroundImage = Properties.Resources.Phone;
+            btnPhone.BackgroundImage = Properties.Resources.Phone_used;
+        }
+
+        // Kiểm tra đáp án A
+        private void btnoptionA_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionA);
+        }
+
+        // Kiểm tra đáp án B
+        private void btnoptionB_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionB);
+        }
+
+        // Kiểm tra đáp án C
+        private void btnoptionC_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionC);
+        }
+
+        // Kiểm tra đáp án D
+        private void btnoptionD_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionD);
         }
     }
 }
