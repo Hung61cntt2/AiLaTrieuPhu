@@ -89,8 +89,10 @@ namespace AiLaTrieuPhu
             // 
             // prize15
             // 
-            this.prize15.BackColor = System.Drawing.Color.Indigo;
+            this.prize15.BackColor = System.Drawing.Color.Black;
+            this.prize15.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.checkpoint;
             this.prize15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize15.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize15.ForeColor = System.Drawing.Color.White;
             this.prize15.Location = new System.Drawing.Point(13, 25);
@@ -98,12 +100,15 @@ namespace AiLaTrieuPhu
             this.prize15.Size = new System.Drawing.Size(305, 33);
             this.prize15.TabIndex = 14;
             this.prize15.Text = "15.      150.000.000 VND";
+            this.prize15.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.prize15.UseVisualStyleBackColor = false;
             // 
             // prize14
             // 
-            this.prize14.BackColor = System.Drawing.Color.Indigo;
+            this.prize14.BackColor = System.Drawing.Color.Black;
+            this.prize14.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize14.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize14.Location = new System.Drawing.Point(13, 64);
@@ -115,8 +120,10 @@ namespace AiLaTrieuPhu
             // 
             // prize13
             // 
-            this.prize13.BackColor = System.Drawing.Color.Indigo;
+            this.prize13.BackColor = System.Drawing.Color.Black;
+            this.prize13.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize13.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize13.Location = new System.Drawing.Point(13, 103);
@@ -128,8 +135,10 @@ namespace AiLaTrieuPhu
             // 
             // prize12
             // 
-            this.prize12.BackColor = System.Drawing.Color.Indigo;
+            this.prize12.BackColor = System.Drawing.Color.Black;
+            this.prize12.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize12.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize12.Location = new System.Drawing.Point(13, 142);
@@ -141,8 +150,10 @@ namespace AiLaTrieuPhu
             // 
             // prize11
             // 
-            this.prize11.BackColor = System.Drawing.Color.Indigo;
+            this.prize11.BackColor = System.Drawing.Color.Black;
+            this.prize11.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize11.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize11.Location = new System.Drawing.Point(13, 181);
@@ -154,8 +165,10 @@ namespace AiLaTrieuPhu
             // 
             // prize10
             // 
-            this.prize10.BackColor = System.Drawing.Color.Indigo;
+            this.prize10.BackColor = System.Drawing.Color.Black;
+            this.prize10.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.checkpoint;
             this.prize10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize10.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize10.ForeColor = System.Drawing.Color.White;
             this.prize10.Location = new System.Drawing.Point(13, 220);
@@ -167,8 +180,10 @@ namespace AiLaTrieuPhu
             // 
             // prize9
             // 
-            this.prize9.BackColor = System.Drawing.Color.Indigo;
+            this.prize9.BackColor = System.Drawing.Color.Black;
+            this.prize9.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize9.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize9.Location = new System.Drawing.Point(13, 259);
@@ -180,8 +195,10 @@ namespace AiLaTrieuPhu
             // 
             // prize8
             // 
-            this.prize8.BackColor = System.Drawing.Color.Indigo;
+            this.prize8.BackColor = System.Drawing.Color.Black;
+            this.prize8.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize8.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize8.Location = new System.Drawing.Point(13, 298);
@@ -193,8 +210,10 @@ namespace AiLaTrieuPhu
             // 
             // prize7
             // 
-            this.prize7.BackColor = System.Drawing.Color.Indigo;
+            this.prize7.BackColor = System.Drawing.Color.Black;
+            this.prize7.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize7.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize7.Location = new System.Drawing.Point(13, 337);
@@ -206,8 +225,10 @@ namespace AiLaTrieuPhu
             // 
             // prize6
             // 
-            this.prize6.BackColor = System.Drawing.Color.Indigo;
+            this.prize6.BackColor = System.Drawing.Color.Black;
+            this.prize6.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize6.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize6.Location = new System.Drawing.Point(13, 376);
@@ -219,8 +240,10 @@ namespace AiLaTrieuPhu
             // 
             // prize5
             // 
-            this.prize5.BackColor = System.Drawing.Color.Indigo;
+            this.prize5.BackColor = System.Drawing.Color.Black;
+            this.prize5.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.checkpoint;
             this.prize5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize5.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize5.ForeColor = System.Drawing.Color.White;
             this.prize5.Location = new System.Drawing.Point(13, 415);
@@ -232,8 +255,10 @@ namespace AiLaTrieuPhu
             // 
             // prize4
             // 
-            this.prize4.BackColor = System.Drawing.Color.Indigo;
+            this.prize4.BackColor = System.Drawing.Color.Black;
+            this.prize4.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize4.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize4.Location = new System.Drawing.Point(13, 454);
@@ -245,8 +270,10 @@ namespace AiLaTrieuPhu
             // 
             // prize3
             // 
-            this.prize3.BackColor = System.Drawing.Color.Indigo;
+            this.prize3.BackColor = System.Drawing.Color.Black;
+            this.prize3.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize3.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize3.Location = new System.Drawing.Point(13, 493);
@@ -258,8 +285,10 @@ namespace AiLaTrieuPhu
             // 
             // prize2
             // 
-            this.prize2.BackColor = System.Drawing.Color.Indigo;
+            this.prize2.BackColor = System.Drawing.Color.Black;
+            this.prize2.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize2.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize2.Location = new System.Drawing.Point(13, 532);
@@ -271,8 +300,10 @@ namespace AiLaTrieuPhu
             // 
             // prize1
             // 
-            this.prize1.BackColor = System.Drawing.Color.Indigo;
+            this.prize1.BackColor = System.Drawing.Color.Black;
+            this.prize1.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.prize1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prize1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prize1.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize1.Location = new System.Drawing.Point(13, 571);
@@ -284,7 +315,10 @@ namespace AiLaTrieuPhu
             // 
             // Play
             // 
-            this.Play.BackColor = System.Drawing.Color.Indigo;
+            this.Play.BackColor = System.Drawing.Color.Black;
+            this.Play.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
+            this.Play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Play.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Play.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Play.ForeColor = System.Drawing.Color.White;
             this.Play.Location = new System.Drawing.Point(341, 171);
@@ -292,13 +326,16 @@ namespace AiLaTrieuPhu
             this.Play.Size = new System.Drawing.Size(261, 68);
             this.Play.TabIndex = 3;
             this.Play.Text = "Chơi!";
+            this.Play.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Play.UseVisualStyleBackColor = false;
             this.Play.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnoptionA
             // 
-            this.btnoptionA.BackColor = System.Drawing.Color.Indigo;
+            this.btnoptionA.BackColor = System.Drawing.Color.Black;
+            this.btnoptionA.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnoptionA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnoptionA.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionA.ForeColor = System.Drawing.Color.White;
             this.btnoptionA.Location = new System.Drawing.Point(30, 206);
@@ -306,14 +343,16 @@ namespace AiLaTrieuPhu
             this.btnoptionA.Size = new System.Drawing.Size(405, 68);
             this.btnoptionA.TabIndex = 4;
             this.btnoptionA.Text = "A.";
-            this.btnoptionA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnoptionA.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnoptionA.UseVisualStyleBackColor = false;
             this.btnoptionA.Click += new System.EventHandler(this.btnoptionA_Click);
             // 
             // btnoptionB
             // 
-            this.btnoptionB.BackColor = System.Drawing.Color.Indigo;
+            this.btnoptionB.BackColor = System.Drawing.Color.Black;
+            this.btnoptionB.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnoptionB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnoptionB.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionB.ForeColor = System.Drawing.Color.White;
             this.btnoptionB.Location = new System.Drawing.Point(453, 206);
@@ -321,14 +360,16 @@ namespace AiLaTrieuPhu
             this.btnoptionB.Size = new System.Drawing.Size(405, 68);
             this.btnoptionB.TabIndex = 5;
             this.btnoptionB.Text = "B.";
-            this.btnoptionB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnoptionB.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnoptionB.UseVisualStyleBackColor = false;
             this.btnoptionB.Click += new System.EventHandler(this.btnoptionB_Click);
             // 
             // btnoptionC
             // 
-            this.btnoptionC.BackColor = System.Drawing.Color.Indigo;
+            this.btnoptionC.BackColor = System.Drawing.Color.Black;
+            this.btnoptionC.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnoptionC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnoptionC.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionC.ForeColor = System.Drawing.Color.White;
             this.btnoptionC.Location = new System.Drawing.Point(30, 280);
@@ -336,14 +377,16 @@ namespace AiLaTrieuPhu
             this.btnoptionC.Size = new System.Drawing.Size(405, 68);
             this.btnoptionC.TabIndex = 6;
             this.btnoptionC.Text = "C.";
-            this.btnoptionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnoptionC.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnoptionC.UseVisualStyleBackColor = false;
             this.btnoptionC.Click += new System.EventHandler(this.btnoptionC_Click);
             // 
             // btnoptionD
             // 
-            this.btnoptionD.BackColor = System.Drawing.Color.Indigo;
+            this.btnoptionD.BackColor = System.Drawing.Color.Black;
+            this.btnoptionD.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnoptionD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnoptionD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionD.ForeColor = System.Drawing.Color.White;
             this.btnoptionD.Location = new System.Drawing.Point(453, 280);
@@ -351,14 +394,14 @@ namespace AiLaTrieuPhu
             this.btnoptionD.Size = new System.Drawing.Size(405, 68);
             this.btnoptionD.TabIndex = 7;
             this.btnoptionD.Text = "D.";
-            this.btnoptionD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnoptionD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnoptionD.UseVisualStyleBackColor = false;
             this.btnoptionD.Click += new System.EventHandler(this.btnoptionD_Click);
             // 
             // Time
             // 
             this.Time.AutoSize = true;
-            this.Time.BackColor = System.Drawing.Color.Indigo;
+            this.Time.BackColor = System.Drawing.Color.Black;
             this.Time.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Time.ForeColor = System.Drawing.Color.White;
             this.Time.Location = new System.Drawing.Point(448, 9);
@@ -386,14 +429,19 @@ namespace AiLaTrieuPhu
             // 
             // lblQuestion
             // 
-            this.lblQuestion.BackColor = System.Drawing.Color.Indigo;
+            this.lblQuestion.BackColor = System.Drawing.Color.Black;
+            this.lblQuestion.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.lblQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblQuestion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.lblQuestion.FlatAppearance.BorderSize = 0;
+            this.lblQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblQuestion.Font = new System.Drawing.Font("Maiandra GD", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
             this.lblQuestion.Location = new System.Drawing.Point(30, 18);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(827, 182);
             this.lblQuestion.TabIndex = 8;
+            this.lblQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.lblQuestion.UseVisualStyleBackColor = false;
             // 
             // btn5050
@@ -405,7 +453,7 @@ namespace AiLaTrieuPhu
             this.btn5050.Size = new System.Drawing.Size(70, 70);
             this.btn5050.TabIndex = 10;
             this.btn5050.UseVisualStyleBackColor = true;
-            this.btn5050.Click += new System.EventHandler(this.btn5050_Click_1);
+            this.btn5050.Click += new System.EventHandler(this.btn5050_Click);
             // 
             // Helppanel
             // 
@@ -452,7 +500,6 @@ namespace AiLaTrieuPhu
             this.Controls.Add(this.Prizepanel);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Prizepanel.ResumeLayout(false);
             this.Questionpanel.ResumeLayout(false);
             this.Helppanel.ResumeLayout(false);

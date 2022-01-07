@@ -14,7 +14,7 @@ namespace AiLaTrieuPhu
 {
     public partial class Form1 : Form
     {
-        private Form1 mainMenuForm = null;
+        
         // Thuộc tính câu hỏi
         private int questionNo = 0;
         private QuestionBank bank = null;
@@ -60,13 +60,6 @@ namespace AiLaTrieuPhu
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
         }
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
         
         // Xử lý sự kiện nút Chơi!
         private void button1_Click(object sender, EventArgs e)
@@ -83,11 +76,10 @@ namespace AiLaTrieuPhu
                 }
                 else
                 {
-                    window = new FinalScoreWindows("0. 0 NVD");
+                    window = new FinalScoreWindows("0. 0 VND");
                 }
 
-                // Chuyển tới form final score window và đóng form1
-                window.setMainMenuForm(this.mainMenuForm);
+                // Chuyển tới final score window và đóng form1
                 window.Show();
                 this.Dispose();
             }
@@ -231,7 +223,7 @@ namespace AiLaTrieuPhu
             }
         }
 
-        // Bỏ vô hiệu hóa các đáp án 
+        // Mở các đáp án 
         private void enableOptionButtons()
         {
             foreach (Button button in buttons)
@@ -363,25 +355,9 @@ namespace AiLaTrieuPhu
             return font;
         }
 
-
-        public void setMainMenuForm(Form1 form)
-        {
-            this.mainMenuForm = form;
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Question_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn5050_Click_1(object sender, EventArgs e)
-        {
-            btn5050.BackgroundImage = Properties.Resources._5050_used;
         }
 
         private void btnAudience_Click(object sender, EventArgs e)

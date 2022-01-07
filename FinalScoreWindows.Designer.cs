@@ -36,39 +36,50 @@ namespace AiLaTrieuPhu
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.Indigo;
+            this.lblTitle.BackColor = System.Drawing.Color.Black;
+            this.lblTitle.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
+            this.lblTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.lblTitle.Location = new System.Drawing.Point(68, 64);
+            this.lblTitle.Location = new System.Drawing.Point(12, 64);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(389, 99);
+            this.lblTitle.Size = new System.Drawing.Size(489, 99);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Giải thưởng của bạn:";
+            this.lblTitle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.lblTitle.UseVisualStyleBackColor = false;
             // 
             // lblPrizeAmount
             // 
-            this.lblPrizeAmount.BackColor = System.Drawing.Color.Indigo;
+            this.lblPrizeAmount.BackColor = System.Drawing.Color.Black;
+            this.lblPrizeAmount.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
+            this.lblPrizeAmount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblPrizeAmount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPrizeAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrizeAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.lblPrizeAmount.Location = new System.Drawing.Point(137, 191);
+            this.lblPrizeAmount.Location = new System.Drawing.Point(124, 191);
             this.lblPrizeAmount.Name = "lblPrizeAmount";
             this.lblPrizeAmount.Size = new System.Drawing.Size(268, 87);
             this.lblPrizeAmount.TabIndex = 1;
+            this.lblPrizeAmount.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.lblPrizeAmount.UseVisualStyleBackColor = false;
-            this.lblPrizeAmount.Click += new System.EventHandler(this.lblPrizeAmount_Click);
             // 
             // btnReturnToForm1
             // 
-            this.btnReturnToForm1.BackColor = System.Drawing.Color.Indigo;
+            this.btnReturnToForm1.BackColor = System.Drawing.Color.Black;
+            this.btnReturnToForm1.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
+            this.btnReturnToForm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReturnToForm1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReturnToForm1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToForm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnReturnToForm1.Location = new System.Drawing.Point(137, 310);
+            this.btnReturnToForm1.Location = new System.Drawing.Point(124, 316);
             this.btnReturnToForm1.Name = "btnReturnToForm1";
             this.btnReturnToForm1.Size = new System.Drawing.Size(268, 87);
             this.btnReturnToForm1.TabIndex = 2;
             this.btnReturnToForm1.Text = "Chơi lại";
             this.btnReturnToForm1.UseVisualStyleBackColor = false;
+            this.btnReturnToForm1.Click += new System.EventHandler(this.btnReturnToForm1_Click);
             // 
             // FinalScoreWindows
             // 
@@ -81,7 +92,6 @@ namespace AiLaTrieuPhu
             this.Controls.Add(this.lblTitle);
             this.Name = "FinalScoreWindows";
             this.Text = "FinalScoreWindows";
-            this.Load += new System.EventHandler(this.FinalScoreWindows_Load);
             this.ResumeLayout(false);
 
         }
