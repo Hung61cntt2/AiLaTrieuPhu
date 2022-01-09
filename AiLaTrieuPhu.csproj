@@ -116,8 +116,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QuestionDataBase.db" />
-    <None Include="questionsDatabase.db">
+    <None Include="QuestionDataBase.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Am-thanh-tra-loi-dung-Ai-la-trieu-phu-www_nhacchuongvui_com.wav" />

@@ -76,7 +76,7 @@ namespace AiLaTrieuPhu
                 }
                 else
                 {
-                    window = new FinalScoreWindows("0. 0 VND");
+                    window = new FinalScoreWindows(" VND");
                 }
 
                 // Chuyển tới final score window và đóng form1
@@ -205,6 +205,30 @@ namespace AiLaTrieuPhu
 
         }
 
+        // Kiểm tra đáp án A
+        private void btnoptionA_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionA);
+        }
+
+        // Kiểm tra đáp án B
+        private void btnoptionB_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionB);
+        }
+
+        // Kiểm tra đáp án C
+        private void btnoptionC_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionC);
+        }
+
+        // Kiểm tra đáp án D
+        private void btnoptionD_Click(object sender, EventArgs e)
+        {
+            answerCheck(btnoptionD);
+        }
+
         // Đặt lại nền
         private void resetButtonBackgrounds()
         {
@@ -318,11 +342,24 @@ namespace AiLaTrieuPhu
             if (i != 0)
             {
                 i--;
+                Time.Text = i.ToString();
             }
 
             else
             {
                 timer1.Stop();
+                Play.Text = "Đi đến giải thưởng";
+                foreach (Button button in buttons)
+                {
+                    if (button.Enabled == true)
+                    {
+                        if (currentQuestion.checkAnswer(button.Text))
+                        {
+                            button.BackgroundImage = Properties.Resources.correct;
+                        }
+                    }
+                }
+                disableOptionButtons();
             }
         }
 
@@ -370,28 +407,6 @@ namespace AiLaTrieuPhu
             btnPhone.BackgroundImage = Properties.Resources.Phone_used;
         }
 
-        // Kiểm tra đáp án A
-        private void btnoptionA_Click(object sender, EventArgs e)
-        {
-            answerCheck(btnoptionA);
-        }
 
-        // Kiểm tra đáp án B
-        private void btnoptionB_Click(object sender, EventArgs e)
-        {
-            answerCheck(btnoptionB);
-        }
-
-        // Kiểm tra đáp án C
-        private void btnoptionC_Click(object sender, EventArgs e)
-        {
-            answerCheck(btnoptionC);
-        }
-
-        // Kiểm tra đáp án D
-        private void btnoptionD_Click(object sender, EventArgs e)
-        {
-            answerCheck(btnoptionD);
-        }
     }
 }

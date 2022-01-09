@@ -12,7 +12,7 @@ namespace AiLaTrieuPhu
 {
     public partial class FinalScoreWindows : Form
     {
-        private Form1 Form = null;
+        private Form1 MainForm = null;
         public FinalScoreWindows(string score)
         {
             InitializeComponent();
@@ -21,15 +21,13 @@ namespace AiLaTrieuPhu
 
         private void btnReturnToForm1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form = new Form1();
-            Form.Show();
+            MainForm.Show();
             this.Dispose();
         }
 
-        public void setForm1(Form1 form)
+        public void setMainForm(Form1 form)
         {
-            this.Form = form;
+            this.MainForm = form;
         }
 
         private void FinalScoreWindow_FormClosing(object sender, FormClosingEventArgs e)

@@ -336,7 +336,7 @@ namespace AiLaTrieuPhu
             this.btnoptionA.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnoptionA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnoptionA.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnoptionA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionA.ForeColor = System.Drawing.Color.White;
             this.btnoptionA.Location = new System.Drawing.Point(30, 206);
             this.btnoptionA.Name = "btnoptionA";
@@ -353,7 +353,7 @@ namespace AiLaTrieuPhu
             this.btnoptionB.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnoptionB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnoptionB.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnoptionB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionB.ForeColor = System.Drawing.Color.White;
             this.btnoptionB.Location = new System.Drawing.Point(453, 206);
             this.btnoptionB.Name = "btnoptionB";
@@ -370,7 +370,7 @@ namespace AiLaTrieuPhu
             this.btnoptionC.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnoptionC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnoptionC.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnoptionC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionC.ForeColor = System.Drawing.Color.White;
             this.btnoptionC.Location = new System.Drawing.Point(30, 280);
             this.btnoptionC.Name = "btnoptionC";
@@ -387,7 +387,7 @@ namespace AiLaTrieuPhu
             this.btnoptionD.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnoptionD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnoptionD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnoptionD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnoptionD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnoptionD.ForeColor = System.Drawing.Color.White;
             this.btnoptionD.Location = new System.Drawing.Point(453, 280);
             this.btnoptionD.Name = "btnoptionD";
@@ -435,7 +435,7 @@ namespace AiLaTrieuPhu
             this.lblQuestion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.lblQuestion.FlatAppearance.BorderSize = 0;
             this.lblQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblQuestion.Font = new System.Drawing.Font("Maiandra GD", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
             this.lblQuestion.Location = new System.Drawing.Point(30, 18);
             this.lblQuestion.Name = "lblQuestion";

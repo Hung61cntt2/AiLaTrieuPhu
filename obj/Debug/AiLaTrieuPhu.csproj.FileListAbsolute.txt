@@ -29,4 +29,4 @@ C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csproj.CoreC
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csproj.CopyComplete
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.exe
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.pdb
-C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\questionsDatabase.db
+C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\QuestionDataBase.db

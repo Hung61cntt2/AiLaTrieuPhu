@@ -14,7 +14,7 @@ namespace AiLaTrieuPhu
         private SQLiteConnection connect()
         {
             // Tạo mới 1 csdl
-            SQLiteConnection connection = new SQLiteConnection("Data Source=questionsDatabase.db; Version = 3; New = True; Compress = True; ");
+            SQLiteConnection connection = new SQLiteConnection("Data Source=QuestionDataBase.db; Version = 3; New = True; Compress = True; ");
             // Kết nối
             try
             {
