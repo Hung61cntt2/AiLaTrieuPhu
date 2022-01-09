@@ -163,6 +163,15 @@
   <ItemGroup>
     <None Include="Resources\wrong.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1080.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1497321035-lai-van-sam-1-1514299866015.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wwtbam_vietnam_logo-0.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

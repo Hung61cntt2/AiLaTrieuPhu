@@ -36,7 +36,7 @@ namespace AiLaTrieuPhu
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.Black;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.lblTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -52,7 +52,7 @@ namespace AiLaTrieuPhu
             // 
             // lblPrizeAmount
             // 
-            this.lblPrizeAmount.BackColor = System.Drawing.Color.Black;
+            this.lblPrizeAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblPrizeAmount.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.lblPrizeAmount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblPrizeAmount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -67,7 +67,7 @@ namespace AiLaTrieuPhu
             // 
             // btnReturnToForm1
             // 
-            this.btnReturnToForm1.BackColor = System.Drawing.Color.Black;
+            this.btnReturnToForm1.BackColor = System.Drawing.Color.Transparent;
             this.btnReturnToForm1.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.btnReturnToForm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReturnToForm1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -86,6 +86,8 @@ namespace AiLaTrieuPhu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.Wwtbam_vietnam_logo_0;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(513, 450);
             this.Controls.Add(this.btnReturnToForm1);
             this.Controls.Add(this.lblPrizeAmount);

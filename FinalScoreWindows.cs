@@ -34,6 +34,5 @@ namespace AiLaTrieuPhu
         {
             Application.Exit();
         }
-
     }
 }

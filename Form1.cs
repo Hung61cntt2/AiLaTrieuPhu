@@ -348,7 +348,9 @@ namespace AiLaTrieuPhu
             else
             {
                 timer1.Stop();
+
                 Play.Text = "Đi đến giải thưởng";
+                // Hiển thị đáp án đúng khi hết giờ
                 foreach (Button button in buttons)
                 {
                     if (button.Enabled == true)
@@ -359,6 +361,7 @@ namespace AiLaTrieuPhu
                         }
                     }
                 }
+                // Vô hiệu hóa các đáp án
                 disableOptionButtons();
             }
         }
@@ -406,7 +409,6 @@ namespace AiLaTrieuPhu
         {
             btnPhone.BackgroundImage = Properties.Resources.Phone_used;
         }
-
 
     }
 }

@@ -63,6 +63,16 @@ namespace AiLaTrieuPhu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1497321035_lai_van_sam_1_1514299866015 {
+            get {
+                object obj = ResourceManager.GetObject("_1497321035_lai_van_sam_1_1514299866015", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5050 {
             get {
                 object obj = ResourceManager.GetObject("5050", resourceCulture);
@@ -204,6 +214,16 @@ namespace AiLaTrieuPhu.Properties {
         internal static System.IO.UnmanagedMemoryStream WrongAnswer {
             get {
                 return ResourceManager.GetStream("WrongAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wwtbam_vietnam_logo_0 {
+            get {
+                object obj = ResourceManager.GetObject("Wwtbam_vietnam_logo_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
