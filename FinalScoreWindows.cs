@@ -12,27 +12,24 @@ namespace AiLaTrieuPhu
 {
     public partial class FinalScoreWindows : Form
     {
-        private Form1 MainForm = null;
         public FinalScoreWindows(string score)
         {
             InitializeComponent();
-            lblPrizeAmount.Text = score.Substring(2, score.Length - 2);
+            lblPrizeAmount.Text = score.Substring(0, score.Length );
         }
 
         private void btnReturnToForm1_Click(object sender, EventArgs e)
         {
+            Form1 MainForm = new Form1();
             MainForm.Show();
-            this.Dispose();
-        }
-
-        public void setMainForm(Form1 form)
-        {
-            this.MainForm = form;
+            this.Hide();
         }
 
         private void FinalScoreWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+        
     }
 }

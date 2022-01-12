@@ -100,7 +100,7 @@ namespace AiLaTrieuPhu
             this.prize15.Name = "prize15";
             this.prize15.Size = new System.Drawing.Size(305, 40);
             this.prize15.TabIndex = 14;
-            this.prize15.Text = "15.      150.000.000 VND";
+            this.prize15.Text = "15. 150,000,000VND";
             this.prize15.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.prize15.UseVisualStyleBackColor = false;
             // 
@@ -116,7 +116,7 @@ namespace AiLaTrieuPhu
             this.prize14.Name = "prize14";
             this.prize14.Size = new System.Drawing.Size(305, 40);
             this.prize14.TabIndex = 13;
-            this.prize14.Text = "14.      85.000.000 VND";
+            this.prize14.Text = "14. 85,000,000VND";
             this.prize14.UseVisualStyleBackColor = false;
             // 
             // prize13
@@ -131,7 +131,7 @@ namespace AiLaTrieuPhu
             this.prize13.Name = "prize13";
             this.prize13.Size = new System.Drawing.Size(305, 40);
             this.prize13.TabIndex = 12;
-            this.prize13.Text = "13.      60.000.000 VND";
+            this.prize13.Text = "13. 60,000,000VND";
             this.prize13.UseVisualStyleBackColor = false;
             // 
             // prize12
@@ -146,7 +146,7 @@ namespace AiLaTrieuPhu
             this.prize12.Name = "prize12";
             this.prize12.Size = new System.Drawing.Size(305, 40);
             this.prize12.TabIndex = 11;
-            this.prize12.Text = "12.      40.000.000 VND";
+            this.prize12.Text = "12. 40,000,000VND";
             this.prize12.UseVisualStyleBackColor = false;
             // 
             // prize11
@@ -161,7 +161,7 @@ namespace AiLaTrieuPhu
             this.prize11.Name = "prize11";
             this.prize11.Size = new System.Drawing.Size(305, 40);
             this.prize11.TabIndex = 10;
-            this.prize11.Text = "11.      30.000.000 VND";
+            this.prize11.Text = "11. 30,000,000VND";
             this.prize11.UseVisualStyleBackColor = false;
             // 
             // prize10
@@ -176,7 +176,7 @@ namespace AiLaTrieuPhu
             this.prize10.Name = "prize10";
             this.prize10.Size = new System.Drawing.Size(305, 40);
             this.prize10.TabIndex = 9;
-            this.prize10.Text = "10.      22.000.000 VND";
+            this.prize10.Text = "10. 22.000.000VND";
             this.prize10.UseVisualStyleBackColor = false;
             // 
             // prize9
@@ -191,7 +191,7 @@ namespace AiLaTrieuPhu
             this.prize9.Name = "prize9";
             this.prize9.Size = new System.Drawing.Size(305, 40);
             this.prize9.TabIndex = 8;
-            this.prize9.Text = "9.      14.000.000 VND";
+            this.prize9.Text = "9. 14.000.000VND";
             this.prize9.UseVisualStyleBackColor = false;
             // 
             // prize8
@@ -206,7 +206,7 @@ namespace AiLaTrieuPhu
             this.prize8.Name = "prize8";
             this.prize8.Size = new System.Drawing.Size(305, 40);
             this.prize8.TabIndex = 7;
-            this.prize8.Text = "8.      10.000.000 VND";
+            this.prize8.Text = "8. 10,000,000VND";
             this.prize8.UseVisualStyleBackColor = false;
             // 
             // prize7
@@ -221,7 +221,7 @@ namespace AiLaTrieuPhu
             this.prize7.Name = "prize7";
             this.prize7.Size = new System.Drawing.Size(305, 40);
             this.prize7.TabIndex = 6;
-            this.prize7.Text = "7.      6.000.000 VND";
+            this.prize7.Text = "7. 6,000,000VND";
             this.prize7.UseVisualStyleBackColor = false;
             // 
             // prize6
@@ -236,7 +236,7 @@ namespace AiLaTrieuPhu
             this.prize6.Name = "prize6";
             this.prize6.Size = new System.Drawing.Size(305, 40);
             this.prize6.TabIndex = 5;
-            this.prize6.Text = "6.      3.000.000 VND";
+            this.prize6.Text = "6. 3,000,000VND";
             this.prize6.UseVisualStyleBackColor = false;
             // 
             // prize5
@@ -251,7 +251,7 @@ namespace AiLaTrieuPhu
             this.prize5.Name = "prize5";
             this.prize5.Size = new System.Drawing.Size(305, 40);
             this.prize5.TabIndex = 4;
-            this.prize5.Text = "5.      2.000.000 VND";
+            this.prize5.Text = "5. 2,000,000VND";
             this.prize5.UseVisualStyleBackColor = false;
             // 
             // prize4
@@ -266,7 +266,7 @@ namespace AiLaTrieuPhu
             this.prize4.Name = "prize4";
             this.prize4.Size = new System.Drawing.Size(305, 40);
             this.prize4.TabIndex = 3;
-            this.prize4.Text = "4.      1.000.000 VND";
+            this.prize4.Text = "4. 1,000,000VND";
             this.prize4.UseVisualStyleBackColor = false;
             // 
             // prize3
@@ -281,7 +281,7 @@ namespace AiLaTrieuPhu
             this.prize3.Name = "prize3";
             this.prize3.Size = new System.Drawing.Size(305, 40);
             this.prize3.TabIndex = 2;
-            this.prize3.Text = "3.      600.000 VND";
+            this.prize3.Text = "3. 600,000VND";
             this.prize3.UseVisualStyleBackColor = false;
             // 
             // prize2
@@ -296,7 +296,7 @@ namespace AiLaTrieuPhu
             this.prize2.Name = "prize2";
             this.prize2.Size = new System.Drawing.Size(305, 40);
             this.prize2.TabIndex = 1;
-            this.prize2.Text = "2.      400.000 VND";
+            this.prize2.Text = "2. 400,000VND";
             this.prize2.UseVisualStyleBackColor = false;
             // 
             // prize1
@@ -311,7 +311,7 @@ namespace AiLaTrieuPhu
             this.prize1.Name = "prize1";
             this.prize1.Size = new System.Drawing.Size(305, 40);
             this.prize1.TabIndex = 0;
-            this.prize1.Text = "1.      200.000 VND";
+            this.prize1.Text = "1. 200,000VND";
             this.prize1.UseVisualStyleBackColor = false;
             // 
             // Time
@@ -356,8 +356,9 @@ namespace AiLaTrieuPhu
             this.lblQuestion.ForeColor = System.Drawing.Color.White;
             this.lblQuestion.Location = new System.Drawing.Point(30, 18);
             this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Padding = new System.Windows.Forms.Padding(67, 0, 67, 0);
             this.lblQuestion.Size = new System.Drawing.Size(989, 182);
-            this.lblQuestion.TabIndex = 8;
+            this.lblQuestion.TabIndex = 1;
             this.lblQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.lblQuestion.UseVisualStyleBackColor = false;
             // 
@@ -371,6 +372,7 @@ namespace AiLaTrieuPhu
             this.btnoptionD.ForeColor = System.Drawing.Color.White;
             this.btnoptionD.Location = new System.Drawing.Point(539, 276);
             this.btnoptionD.Name = "btnoptionD";
+            this.btnoptionD.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnoptionD.Size = new System.Drawing.Size(480, 68);
             this.btnoptionD.TabIndex = 7;
             this.btnoptionD.Text = "D.";
@@ -388,6 +390,7 @@ namespace AiLaTrieuPhu
             this.btnoptionC.ForeColor = System.Drawing.Color.White;
             this.btnoptionC.Location = new System.Drawing.Point(30, 280);
             this.btnoptionC.Name = "btnoptionC";
+            this.btnoptionC.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnoptionC.Size = new System.Drawing.Size(480, 68);
             this.btnoptionC.TabIndex = 6;
             this.btnoptionC.Text = "C.";
@@ -405,6 +408,7 @@ namespace AiLaTrieuPhu
             this.btnoptionB.ForeColor = System.Drawing.Color.White;
             this.btnoptionB.Location = new System.Drawing.Point(539, 202);
             this.btnoptionB.Name = "btnoptionB";
+            this.btnoptionB.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnoptionB.Size = new System.Drawing.Size(480, 68);
             this.btnoptionB.TabIndex = 5;
             this.btnoptionB.Text = "B.";
@@ -422,6 +426,7 @@ namespace AiLaTrieuPhu
             this.btnoptionA.ForeColor = System.Drawing.Color.White;
             this.btnoptionA.Location = new System.Drawing.Point(30, 206);
             this.btnoptionA.Name = "btnoptionA";
+            this.btnoptionA.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnoptionA.Size = new System.Drawing.Size(480, 68);
             this.btnoptionA.TabIndex = 4;
             this.btnoptionA.Text = "A.";

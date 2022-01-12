@@ -14,7 +14,6 @@ namespace AiLaTrieuPhu
 {
     public partial class Form1 : Form
     {
-        
         // Thuộc tính câu hỏi
         private int questionNo = 0;
         private QuestionBank bank = null;
@@ -62,26 +61,27 @@ namespace AiLaTrieuPhu
         }
         
         // Xử lý sự kiện nút Chơi!
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, System.EventArgs e)
         {
             // Hiển thị form final score window và đóng form1
             if (Play.Text == "Đi đến giải thưởng")
             {
-                FinalScoreWindows window;
-
+                FinalScoreWindows final;
                 // Nếu vượt qua được checkpoint, thì đó là giải thưởng cuối cùng, ngược lại giải thưởng cuối cùng là 0 VND
                 if (lastCheckpoint != null)
                 {
-                    window = new FinalScoreWindows(lastCheckpoint.getPrize().Text);
+                    final = new FinalScoreWindows(lastCheckpoint.getPrize().Text);
+                    
                 }
                 else
                 {
-                    window = new FinalScoreWindows(" VND");
+                    final = new FinalScoreWindows("0VND");
+                    
                 }
-
                 // Chuyển tới final score window và đóng form1
-                window.Show();
-                this.Dispose();
+                final.Show();
+                this.Hide();
+
             }
             else if (Play.Text == "Câu hỏi tiếp theo" || Play.Text == "Chơi!")
             {
@@ -206,25 +206,25 @@ namespace AiLaTrieuPhu
         }
 
         // Kiểm tra đáp án A
-        private void btnoptionA_Click(object sender, EventArgs e)
+        private void btnoptionA_Click(object sender, System.EventArgs e)
         {
             answerCheck(btnoptionA);
         }
 
         // Kiểm tra đáp án B
-        private void btnoptionB_Click(object sender, EventArgs e)
+        private void btnoptionB_Click(object sender, System.EventArgs e)
         {
             answerCheck(btnoptionB);
         }
 
         // Kiểm tra đáp án C
-        private void btnoptionC_Click(object sender, EventArgs e)
+        private void btnoptionC_Click(object sender, System.EventArgs e)
         {
             answerCheck(btnoptionC);
         }
 
         // Kiểm tra đáp án D
-        private void btnoptionD_Click(object sender, EventArgs e)
+        private void btnoptionD_Click(object sender, System.EventArgs e)
         {
             answerCheck(btnoptionD);
         }
@@ -290,13 +290,13 @@ namespace AiLaTrieuPhu
         }
 
 
-        // Generate poll results
+        // Tạo kết quả ngẫu nhiên
         private List<int> generateRandomPollResults()
         {
 
             List<int> randomNumbers = new List<int>();
 
-            // If 50/50 has not been used generate 4 numbers else generate 2
+            // Nếu nút trợ giúp 50/50 chưa được dùng thì tạo 4 số ngẫu nhiên, ngược lại thì tạo 2 số ngẫu nhiên
             if (btn5050.Enabled == true)
             {
                 randomNumbers.Add(randomNumberGenerator.Next(1, 25));
@@ -314,7 +314,7 @@ namespace AiLaTrieuPhu
                 randomNumbers.Add(100 - randomNumbers[0]);
             }
 
-            // Sort list of numbers and return
+            // Sắp xếp lại các số ngẫu nhiên và trả về
             randomNumbers.Sort();
             return randomNumbers;
 
@@ -366,34 +366,6 @@ namespace AiLaTrieuPhu
             }
         }
 
-
-        private void lblQuestion_TextChanged(object sender, EventArgs e)
-        {
-
-            Control control = (sender as Control);
-            control.Font = sizeTextToControl(control, this.CreateGraphics(), control.Padding.Right);
-
-        }
-
-
-        private Font sizeTextToControl(Control control, Graphics graphic, int padding)
-        {
-            // Create a small font
-            Font font;
-            font = new Font(control.Font.FontFamily, 6.0f, control.Font.Style);
-            SizeF textSize = graphic.MeasureString(control.Text, font);
-
-            // Loop until it fits perfect
-            while ((textSize.Width < control.Width - padding) && (textSize.Height < control.Height - padding))
-            {
-                font = new Font(font.FontFamily, font.Size + 0.5f, font.Style);
-                textSize = graphic.MeasureString(control.Text, font);
-            }
-
-            font = new Font(font.FontFamily, font.Size - 0.5f, font.Style);
-
-            return font;
-        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

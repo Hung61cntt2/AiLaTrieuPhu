@@ -56,7 +56,7 @@ namespace AiLaTrieuPhu
             this.lblPrizeAmount.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources.button;
             this.lblPrizeAmount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lblPrizeAmount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblPrizeAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrizeAmount.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrizeAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblPrizeAmount.Location = new System.Drawing.Point(124, 191);
             this.lblPrizeAmount.Name = "lblPrizeAmount";

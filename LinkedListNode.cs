@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
+using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -9,7 +11,7 @@ namespace AiLaTrieuPhu
 {
     public class LinkedListNode
     {
-        // Thuộc tính giải thưởng và checkpoint
+        // Thuộc tính giải thưởng, checkpoint và tiền 
         private Button prize;
         private Boolean checkpoint;
 
