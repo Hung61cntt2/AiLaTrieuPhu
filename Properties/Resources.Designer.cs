@@ -111,15 +111,6 @@ namespace AiLaTrieuPhu.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Background {
-            get {
-                return ResourceManager.GetStream("Background", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap button {
@@ -146,15 +137,6 @@ namespace AiLaTrieuPhu.Properties {
             get {
                 object obj = ResourceManager.GetObject("correct", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream CorrectAnswer {
-            get {
-                return ResourceManager.GetStream("CorrectAnswer", resourceCulture);
             }
         }
         
@@ -205,15 +187,6 @@ namespace AiLaTrieuPhu.Properties {
             get {
                 object obj = ResourceManager.GetObject("wrong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream WrongAnswer {
-            get {
-                return ResourceManager.GetStream("WrongAnswer", resourceCulture);
             }
         }
         

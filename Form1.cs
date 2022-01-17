@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.Security.Policy;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace AiLaTrieuPhu
 {
@@ -47,12 +49,12 @@ namespace AiLaTrieuPhu
             prizeList.addToList(new LinkedListNode(prize2, false));
             prizeList.addToList(new LinkedListNode(prize3, false));
             prizeList.addToList(new LinkedListNode(prize4, false));
-            prizeList.addToList(new LinkedListNode(prize5, false));
+            prizeList.addToList(new LinkedListNode(prize5, true));
             prizeList.addToList(new LinkedListNode(prize6, false));
             prizeList.addToList(new LinkedListNode(prize7, false));
             prizeList.addToList(new LinkedListNode(prize8, false));
             prizeList.addToList(new LinkedListNode(prize9, false));
-            prizeList.addToList(new LinkedListNode(prize10, false));
+            prizeList.addToList(new LinkedListNode(prize10, true));
             prizeList.addToList(new LinkedListNode(prize11, false));
             prizeList.addToList(new LinkedListNode(prize12, false));
             prizeList.addToList(new LinkedListNode(prize13, false));
@@ -75,7 +77,7 @@ namespace AiLaTrieuPhu
                 }
                 else
                 {
-                    final = new FinalScoreWindows("0VND");
+                    final = new FinalScoreWindows("0 VND");
                     
                 }
                 // Chuyển tới final score window và đóng form1
@@ -87,7 +89,7 @@ namespace AiLaTrieuPhu
             {
                 // Mở các nút đáp án
                 enableOptionButtons();
-                //chartPollResults.Visible = false;
+                chartPollResults.Visible = false;
 
                 if (questionNo < 15)
                 {
@@ -289,8 +291,104 @@ namespace AiLaTrieuPhu
 
         }
 
+        // Nút trợ giúp hỏi ý kiến khán giả
+        private void btnAudience_Click(object sender, EventArgs e)
+        {
 
-        // Tạo kết quả ngẫu nhiên
+            // Danh sách của kết quả thăm dò
+            List<PollResults> pollResults = new List<PollResults>();
+
+            // Danh sách để giữ các số ngẫu nhiên đã tạo (giá trị cuối cùng trong danh sách sẽ cao nhất)
+            List<int> randomNumbers = generateRandomPollResults();
+
+            // Giá trị kiểm tra cuộc thăm dò được thêm vào cho đáp án đúng
+            Boolean correctAnswerPollResultAdded = false;
+
+            // Lặp qua các nút
+            for (int idx = 0; idx < buttons.Count; idx++)
+            {
+
+                // Nếu các đáp án đang được mở
+                if (buttons[idx].Enabled == true)
+                {
+
+                    // Nếu nút dành cho đáp án đúng, thêm giá trị cuối cùng từ danh sách và xóa giá trị khỏi danh sách
+                    if (currentQuestion.checkAnswer(buttons[idx].Text))
+                    {
+
+                        pollResults.Add(new PollResults(buttons[idx].Text.Substring(0, 1), randomNumbers[randomNumbers.Count - 1]));
+
+                        correctAnswerPollResultAdded = true;
+                        randomNumbers.RemoveAt(randomNumbers.Count - 1);
+
+                    }
+                    else
+                    {
+                        int randomPollResultIndex;
+
+                        // Nếu cuộc thăm dò ý kiến ​​cho câu trả lời đúng được thêm vào, thêm số ngẫu nhiên từ tổng thể, nếu không sẽ loại trừ giá trị cuối cùng
+                        if (correctAnswerPollResultAdded)
+                        {
+                            if (randomNumbers.Count != 1)
+                            {
+                                randomPollResultIndex = randomNumberGenerator.Next(0, randomNumbers.Count - 1);
+                            }
+                            else
+                            {
+                                randomPollResultIndex = 0;
+                            }
+
+                        }
+                        else
+                        {
+                            randomPollResultIndex = randomNumberGenerator.Next(0, randomNumbers.Count - 2);
+
+                        }
+
+                        // Thêm kết quả thăm dò vào danh sách
+                        pollResults.Add(new PollResults(buttons[idx].Text.Substring(0, 1), randomNumbers[randomPollResultIndex]));
+
+                        // Xóa giá trị khỏi danh sách để ngăn lặp lại
+                        randomNumbers.RemoveAt(randomPollResultIndex);
+                    }
+                }
+
+            }
+
+            // Hiển thị kết quả lên giao diện biểu đồ
+            displayPollResultsOnGraph(pollResults);
+
+            // Đặt lại nền đã dùng và vô hiệu hóa nút
+            btnAudience.BackgroundImage = Properties.Resources.Audience_used;
+            btnAudience.Enabled = false;
+
+        }
+
+        // Thêm kết quả thăm dò vào giao diện biểu đồ
+        private void displayPollResultsOnGraph(List<PollResults> pollResults)
+        {
+            // Xóa biểu đồ và thêm số series
+            chartPollResults.Series.Clear();
+            chartPollResults.Series.Add("poll");
+
+            // Thiết kế giao diện 
+            chartPollResults.Series[0].BackGradientStyle = GradientStyle.LeftRight;
+            chartPollResults.Series[0].Color = Color.FromArgb(212, 175, 55);
+            chartPollResults.Series[0].BackSecondaryColor = Color.Black;
+
+            // Thêm mỗi kết quả thăm dò với chữ cái để tương ứng với nút
+            foreach (PollResults poll in pollResults)
+            {
+                chartPollResults.Series["poll"].Points.AddXY(Convert.ToString(poll.getoptionKey()), poll.getValue());
+            }
+
+            // Hiển thị biểu đồ
+            chartPollResults.Visible = true;
+        }
+
+
+
+        // Tạo kết quả ngẫu nhiên cho cuộc thăm dò
         private List<int> generateRandomPollResults()
         {
 
@@ -319,6 +417,15 @@ namespace AiLaTrieuPhu
             return randomNumbers;
 
         }
+
+        // Nút trợ giúp gọi điện thoại cho người thân
+        private void btnPhone_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bố nghĩ đáp án đúng là: " +  currentQuestion.answer  + " .Cố lên bố tin con sẽ thắng");
+            btnPhone.BackgroundImage = Properties.Resources.Phone_used;
+            btnPhone.Enabled = false;
+        }
+
 
         // Đặt bộ đếm thời gian
         int i;
@@ -370,16 +477,6 @@ namespace AiLaTrieuPhu
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnAudience_Click(object sender, EventArgs e)
-        {
-            btnAudience.BackgroundImage = Properties.Resources.Audience_used;
-        }
-
-        private void btnPhone_Click(object sender, EventArgs e)
-        {
-            btnPhone.BackgroundImage = Properties.Resources.Phone_used;
         }
 
     }

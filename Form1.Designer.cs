@@ -30,6 +30,9 @@ namespace AiLaTrieuPhu
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Prizepanel = new System.Windows.Forms.Panel();
             this.prize15 = new System.Windows.Forms.Button();
             this.prize14 = new System.Windows.Forms.Button();
@@ -59,9 +62,11 @@ namespace AiLaTrieuPhu
             this.btnAudience = new System.Windows.Forms.Button();
             this.btn5050 = new System.Windows.Forms.Button();
             this.Play = new System.Windows.Forms.Button();
+            this.chartPollResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Prizepanel.SuspendLayout();
             this.Questionpanel.SuspendLayout();
             this.Helppanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPollResults)).BeginInit();
             this.SuspendLayout();
             // 
             // Prizepanel
@@ -100,7 +105,7 @@ namespace AiLaTrieuPhu
             this.prize15.Name = "prize15";
             this.prize15.Size = new System.Drawing.Size(305, 40);
             this.prize15.TabIndex = 14;
-            this.prize15.Text = "15. 150,000,000VND";
+            this.prize15.Text = "15. 150,000,000 VND";
             this.prize15.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.prize15.UseVisualStyleBackColor = false;
             // 
@@ -116,7 +121,7 @@ namespace AiLaTrieuPhu
             this.prize14.Name = "prize14";
             this.prize14.Size = new System.Drawing.Size(305, 40);
             this.prize14.TabIndex = 13;
-            this.prize14.Text = "14. 85,000,000VND";
+            this.prize14.Text = "14. 85,000,000 VND";
             this.prize14.UseVisualStyleBackColor = false;
             // 
             // prize13
@@ -131,7 +136,7 @@ namespace AiLaTrieuPhu
             this.prize13.Name = "prize13";
             this.prize13.Size = new System.Drawing.Size(305, 40);
             this.prize13.TabIndex = 12;
-            this.prize13.Text = "13. 60,000,000VND";
+            this.prize13.Text = "13. 60,000,000 VND";
             this.prize13.UseVisualStyleBackColor = false;
             // 
             // prize12
@@ -146,7 +151,7 @@ namespace AiLaTrieuPhu
             this.prize12.Name = "prize12";
             this.prize12.Size = new System.Drawing.Size(305, 40);
             this.prize12.TabIndex = 11;
-            this.prize12.Text = "12. 40,000,000VND";
+            this.prize12.Text = "12. 40,000,000 VND";
             this.prize12.UseVisualStyleBackColor = false;
             // 
             // prize11
@@ -161,7 +166,7 @@ namespace AiLaTrieuPhu
             this.prize11.Name = "prize11";
             this.prize11.Size = new System.Drawing.Size(305, 40);
             this.prize11.TabIndex = 10;
-            this.prize11.Text = "11. 30,000,000VND";
+            this.prize11.Text = "11. 30,000,000 VND";
             this.prize11.UseVisualStyleBackColor = false;
             // 
             // prize10
@@ -176,7 +181,7 @@ namespace AiLaTrieuPhu
             this.prize10.Name = "prize10";
             this.prize10.Size = new System.Drawing.Size(305, 40);
             this.prize10.TabIndex = 9;
-            this.prize10.Text = "10. 22.000.000VND";
+            this.prize10.Text = "10. 22.000.000 VND";
             this.prize10.UseVisualStyleBackColor = false;
             // 
             // prize9
@@ -191,7 +196,7 @@ namespace AiLaTrieuPhu
             this.prize9.Name = "prize9";
             this.prize9.Size = new System.Drawing.Size(305, 40);
             this.prize9.TabIndex = 8;
-            this.prize9.Text = "9. 14.000.000VND";
+            this.prize9.Text = "9. 14.000.000 VND";
             this.prize9.UseVisualStyleBackColor = false;
             // 
             // prize8
@@ -206,7 +211,7 @@ namespace AiLaTrieuPhu
             this.prize8.Name = "prize8";
             this.prize8.Size = new System.Drawing.Size(305, 40);
             this.prize8.TabIndex = 7;
-            this.prize8.Text = "8. 10,000,000VND";
+            this.prize8.Text = "8. 10,000,000 VND";
             this.prize8.UseVisualStyleBackColor = false;
             // 
             // prize7
@@ -221,7 +226,7 @@ namespace AiLaTrieuPhu
             this.prize7.Name = "prize7";
             this.prize7.Size = new System.Drawing.Size(305, 40);
             this.prize7.TabIndex = 6;
-            this.prize7.Text = "7. 6,000,000VND";
+            this.prize7.Text = "7. 6,000,000 VND";
             this.prize7.UseVisualStyleBackColor = false;
             // 
             // prize6
@@ -236,7 +241,7 @@ namespace AiLaTrieuPhu
             this.prize6.Name = "prize6";
             this.prize6.Size = new System.Drawing.Size(305, 40);
             this.prize6.TabIndex = 5;
-            this.prize6.Text = "6. 3,000,000VND";
+            this.prize6.Text = "6. 3,000,000 VND";
             this.prize6.UseVisualStyleBackColor = false;
             // 
             // prize5
@@ -251,7 +256,7 @@ namespace AiLaTrieuPhu
             this.prize5.Name = "prize5";
             this.prize5.Size = new System.Drawing.Size(305, 40);
             this.prize5.TabIndex = 4;
-            this.prize5.Text = "5. 2,000,000VND";
+            this.prize5.Text = "5. 2,000,000 VND";
             this.prize5.UseVisualStyleBackColor = false;
             // 
             // prize4
@@ -266,7 +271,7 @@ namespace AiLaTrieuPhu
             this.prize4.Name = "prize4";
             this.prize4.Size = new System.Drawing.Size(305, 40);
             this.prize4.TabIndex = 3;
-            this.prize4.Text = "4. 1,000,000VND";
+            this.prize4.Text = "4. 1,000,000 VND";
             this.prize4.UseVisualStyleBackColor = false;
             // 
             // prize3
@@ -281,7 +286,7 @@ namespace AiLaTrieuPhu
             this.prize3.Name = "prize3";
             this.prize3.Size = new System.Drawing.Size(305, 40);
             this.prize3.TabIndex = 2;
-            this.prize3.Text = "3. 600,000VND";
+            this.prize3.Text = "3. 600,000 VND";
             this.prize3.UseVisualStyleBackColor = false;
             // 
             // prize2
@@ -296,7 +301,7 @@ namespace AiLaTrieuPhu
             this.prize2.Name = "prize2";
             this.prize2.Size = new System.Drawing.Size(305, 40);
             this.prize2.TabIndex = 1;
-            this.prize2.Text = "2. 400,000VND";
+            this.prize2.Text = "2. 400,000 VND";
             this.prize2.UseVisualStyleBackColor = false;
             // 
             // prize1
@@ -311,7 +316,7 @@ namespace AiLaTrieuPhu
             this.prize1.Name = "prize1";
             this.prize1.Size = new System.Drawing.Size(305, 40);
             this.prize1.TabIndex = 0;
-            this.prize1.Text = "1. 200,000VND";
+            this.prize1.Text = "1. 200,000 VND";
             this.prize1.UseVisualStyleBackColor = false;
             // 
             // Time
@@ -495,6 +500,24 @@ namespace AiLaTrieuPhu
             this.Play.UseVisualStyleBackColor = false;
             this.Play.Click += new System.EventHandler(this.button1_Click);
             // 
+            // chartPollResults
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartPollResults.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chartPollResults.Legends.Add(legend1);
+            this.chartPollResults.Location = new System.Drawing.Point(636, 17);
+            this.chartPollResults.Name = "chartPollResults";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartPollResults.Series.Add(series1);
+            this.chartPollResults.Size = new System.Drawing.Size(400, 201);
+            this.chartPollResults.TabIndex = 12;
+            this.chartPollResults.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -503,6 +526,7 @@ namespace AiLaTrieuPhu
             this.BackgroundImage = global::AiLaTrieuPhu.Properties.Resources._1497321035_lai_van_sam_1_1514299866015;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1418, 722);
+            this.Controls.Add(this.chartPollResults);
             this.Controls.Add(this.Helppanel);
             this.Controls.Add(this.Questionpanel);
             this.Controls.Add(this.Time);
@@ -513,6 +537,7 @@ namespace AiLaTrieuPhu
             this.Prizepanel.ResumeLayout(false);
             this.Questionpanel.ResumeLayout(false);
             this.Helppanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartPollResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,6 +573,7 @@ namespace AiLaTrieuPhu
         private System.Windows.Forms.Panel Helppanel;
         private System.Windows.Forms.Button btnPhone;
         private System.Windows.Forms.Button btnAudience;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPollResults;
     }
 }
 

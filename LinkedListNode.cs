@@ -11,7 +11,7 @@ namespace AiLaTrieuPhu
 {
     public class LinkedListNode
     {
-        // Thuộc tính giải thưởng, checkpoint và tiền 
+        // Thuộc tính giải thưởng, checkpoint 
         private Button prize;
         private Boolean checkpoint;
 

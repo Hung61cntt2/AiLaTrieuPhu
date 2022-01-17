@@ -20,7 +20,6 @@ C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\System.Data.SQLite.Linq.d
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\EntityFramework.xml
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\System.Data.SQLite.xml
-C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csprojAssemblyReference.cache
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.FinalScoreWindows.resources
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.Form1.resources
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.Properties.Resources.resources
@@ -30,3 +29,4 @@ C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csproj.CopyC
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.exe
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.pdb
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\QuestionDataBase.db
+C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csproj.AssemblyReference.cache
