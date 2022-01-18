@@ -30,3 +30,6 @@ C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.exe
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.pdb
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\QuestionDataBase.db
 C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.csproj.AssemblyReference.cache
+C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.Login.resources
+C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\bin\Debug\TaiKhoanDataBase.db
+C:\Users\thanh\OneDrive\Desktop\AiLaTrieuPhu\obj\Debug\AiLaTrieuPhu.QuestionForm.resources

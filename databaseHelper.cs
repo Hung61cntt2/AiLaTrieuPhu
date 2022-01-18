@@ -35,7 +35,7 @@ namespace AiLaTrieuPhu
             SQLiteCommand command = connection.CreateCommand();
 
             // Tạo hàng chờ và xử lý
-            command.CommandText = "SELECT * FROM Question WHERE ID IN (SELECT ID FROM Question ORDER BY RANDOM() LIMIT " + n + ")";
+            command.CommandText = "SELECT * FROM Questions WHERE ID IN (SELECT ID FROM Questions ORDER BY RANDOM() LIMIT " + n + ")";
             SQLiteDataReader dataReader = command.ExecuteReader();
 
             // Ngắt kết nối và trả dữ liệu về csdl
